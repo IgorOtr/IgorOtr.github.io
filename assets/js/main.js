@@ -8,11 +8,11 @@ const presentationText = document.querySelector('#presentationText');
 
 
 
-async function writeText(element) {
+function writeText(element) {
     
     const textToArray = element.innerHTML.split('');
     element.innerHTML = '';
-    await textToArray.forEach((letra,i) => {
+    textToArray.forEach((letra,i) => {
         setTimeout(() => {
             element.innerHTML += letra;
         }, 85 * i);
